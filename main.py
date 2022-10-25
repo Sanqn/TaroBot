@@ -1,12 +1,12 @@
 from flask import Flask, request
 import os
 import telebot
-import astrobot
+import tbot
 
 
 server = Flask(__name__)
-bot = astrobot.bot
-astrobot.main()
+bot = tbot.bot
+tbot.main()
 
 
 @server.route('/' + bot.token, methods=['POST'])
