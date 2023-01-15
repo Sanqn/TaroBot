@@ -123,7 +123,7 @@ async def callback_worker(callback: types.CallbackQuery):
             link = f'https://www.elle.ru/astro/{v}/day/'
             browser.get(link)
             time.sleep(1)
-            msg = browser.find_element(By.CLASS_NAME, "articleParagraph").text
+            msg = browser.find_element(By.CLASS_NAME, "block-text").text
             browser.quit()
             await bot.send_message(callback.from_user.id, f'<b>Знак зодиака {k.upper()}</b>\n {msg}', parse_mode='html')
 
