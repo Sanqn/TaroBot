@@ -21,7 +21,7 @@ def get_message():
 def webhook():
     bot.remove_webhook()
     bot.set_webhook(url='https://whispering-wildwood-21515.herokuapp.com/' + bot.token)
-    return 'Hello from bot', 200
+    return 'Hello from tarobot', 200
 
 
 @server.route('/admin')
